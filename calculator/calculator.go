@@ -28,16 +28,16 @@ var bundleItems = map[string]bool{
 	"orange": true,
 }
 
-func OrderFood(orderName string, quantity int) {
+func OrderFood(orderName string, quantity int) error {
 	if _, exists := Prices[orderName]; !exists {
-		println("Invalid order name")
-		return
+		return fmt.Errorf("invalid order")
 	}
 	OrderCount[orderName] += quantity
 	fmt.Println("All items in the order are: ")
 	for k, v := range OrderCount {
 		fmt.Println(k, " : ", v)
 	}
+	return nil
 }
 
 func CheckOut(isMember bool) float64 {

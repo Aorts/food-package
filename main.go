@@ -49,31 +49,52 @@ func orderFood() {
 		case 1:
 			fmt.Println("You have selected Red set")
 			q := quantity()
-			calculator.OrderFood("red", q)
+			if err := calculator.OrderFood("red", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 2:
 			fmt.Println("You have selected Green set")
 			q := quantity()
-			calculator.OrderFood("green", q)
+			if err := calculator.OrderFood("green", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 3:
 			fmt.Println("You have selected Blue set")
 			q := quantity()
-			calculator.OrderFood("blue", q)
+			if err := calculator.OrderFood("blue", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 4:
 			fmt.Println("You have selected Yellow set")
 			q := quantity()
-			calculator.OrderFood("yellow", q)
+			if err := calculator.OrderFood("yellow", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 5:
 			fmt.Println("You have selected Pink set")
 			q := quantity()
-			calculator.OrderFood("pink", q)
+			if err := calculator.OrderFood("pink", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 6:
 			fmt.Println("You have selected Purple set")
 			q := quantity()
-			calculator.OrderFood("purple", q)
+			if err := calculator.OrderFood("purple", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 7:
 			fmt.Println("You have selected Orange set")
 			q := quantity()
-			calculator.OrderFood("orange", q)
+			if err := calculator.OrderFood("orange", q); err != nil {
+				fmt.Println(err)
+				continue
+			}
 		case 8:
 			fmt.Println("Returning to main menu")
 			return
